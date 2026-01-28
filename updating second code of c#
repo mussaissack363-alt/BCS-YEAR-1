@@ -1,0 +1,27 @@
+using System;
+
+namespace GhostProtocol.Level2
+{
+    public class ElevatorAccess
+    {
+        public static void Main(string[] args)
+        {
+            int floor = 100;
+            bool hasAdminKeycard = true;
+
+        // the "==" os fir comparison, && represents "AND"
+            if (floor == 100 && hasAdminKeycard)
+            {
+                Console.WriteLine("Accessing Penthouse: Norman Osborn's Private Lab.");
+            }
+            else if (floor >= 1 && floor < 100)
+            {
+                Console.WriteLine($"Accessing Floor {floor}: Standard Research Lab.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Floor. Security alerted!");
+            }
+        }
+    }
+}
