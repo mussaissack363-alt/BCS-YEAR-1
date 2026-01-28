@@ -1,0 +1,25 @@
+using System;
+
+namespace GhostProtocol.Level2
+{
+    public class PerimeterGuard
+    {
+        public static void Main(string[] args)
+        {
+            int threatLevel = 8;
+
+            if (threatLevel >= 7)
+            {
+                Console.WriteLine($"[ALERT] Threat Level {threatLevel}: Deploying Web-Traps!");
+            }
+            else if (threatLevel >= 1 && threatLevel <= 6)
+            {
+                Console.WriteLine($"Threat Level {threatLevel}: Monitoring situation.");
+            }
+            else
+            {
+                Console.WriteLine("Perimeter Clear.");
+            }
+        }
+    }
+}
