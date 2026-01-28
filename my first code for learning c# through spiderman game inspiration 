@@ -6,16 +6,13 @@ namespace GhostProtocol.Level1
     {
         public static void Main(string[] args)
         {
-            // Constants represent values that never change
             const string LabName = "Empire State University";
 
-            // Variable declarations with proper C# casing (camelCase)
             int batchNumber = 101;
             double viscosity = 0.85;
             string chemicalName = "T-90 Polymer";
             bool isStable = true;
 
-            // Senior Dev Tip: Using String Interpolation ($) for clean output
             Console.WriteLine($"[{LabName}] Batch {batchNumber}: {chemicalName} has a viscosity of {viscosity}. Stability: {isStable}");
         }
     }
