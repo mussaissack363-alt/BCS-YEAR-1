@@ -1,0 +1,54 @@
+using System;
+
+namespace SpiderHud
+{
+    class GradeCalculator
+    {
+        // Objective: Determine Grade using a single-exit logic path
+        public string GetGrade(double marks)
+        {
+            if (marks >= 80) return "A";
+            else if (marks >= 70) return "B";
+            else if (marks >= 50) return "C";
+            else if (marks >= 30) return "D";
+            else return "F";
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            GradeCalculator calc = new GradeCalculator();
+
+            Console.Write("Enter your Marks: ");
+            double marks = Convert.ToDouble(Console.ReadLine());
+
+            // Executing Bridge: Calling the class method
+            string grade = calc.GetGrade(marks);
+
+            // Leveling Up: Using Switch or If/Else for the feedback
+            switch (grade)
+            {
+                case "A":
+                    Console.WriteLine("Excellent! You did splendid!");
+                    break;
+                case "B":
+                    Console.WriteLine("You scored nearly an A!");
+                    break;
+                case "C":
+                    Console.WriteLine("Very Nice!");
+                    break;
+                case "D":
+                    Console.WriteLine("Nice Pass.");
+                    break;
+                default:
+                    Console.WriteLine("Sorry, you failed.");
+                    break;
+            }
+
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
+        }
+    }
+}
